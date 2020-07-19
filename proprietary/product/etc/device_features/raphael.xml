@@ -38,6 +38,8 @@
     <bool name="support_stereo_record">true</bool>
     <!--whether the device supports hd record param-->
     <bool name="support_hd_record_param">false</bool>
+    <!--whether the device supports screenrecorder inner-sound recorder mode-->
+    <integer name="support_inner_record">1</integer>
     <!--whether the device supports screen paper mode-->
     <bool name="support_screen_paper_mode">true</bool>
     <!--whether the device supports button light-->
@@ -94,8 +96,8 @@
     <bool name="support_agps_roaming">false</bool>
     <!--whether the device supports IR-->
     <!-- Support Dual Gps-->
-    <bool name="support_dual_gps">false</bool>
-    <bool name="support_ir">false</bool>
+    <bool name="support_dual_gps">true</bool>
+    <bool name="support_ir">true</bool>
     <!-- whether the device supports app hiding-->
     <bool name="support_app_hiding">true</bool>
     <!--whether the device can read cpu4 freq-->
@@ -185,7 +187,7 @@
     <!--whether support magic mirror in camera-->
     <bool name="support_camera_magic_mirror">true</bool>
     <!--whether support groupshot mode  in camera-->
-    <bool name="support_camera_groupshot">true</bool>
+    <bool name="support_camera_groupshot">false</bool>
     <!--whether support snap with screen off  in camera-->
     <bool name="support_camera_quick_snap">true</bool>
     <!--whether compass support tilt rotate calibrate  -->
@@ -196,6 +198,10 @@
     <bool name="support_aod">true</bool>
     <!-- whether support edge handgrip -->
     <bool name="support_edge_handgrip">false</bool>
+    <!-- whether the device app permission detail show in provision-->
+    <bool name="support_provision_app_permission">true</bool>
+    <!--whether support pre-installed application-->
+    <bool name="support_pre_installed_application">true</bool>
     <!--wheater support validate device when syste upadte -->
     <bool name="support_ota_validate">true</bool>
     <!--whether show basic info items-->
@@ -252,7 +258,7 @@
     </string-array>
     <bool name="support_tap_fingerprint_sensor_to_home">false</bool>
     <!-- finger for alipay. default do not need config. -->
-    <string name="finger_alipay_ifaa_model">Xiaomi-davinci</string>
+    <string name="finger_alipay_ifaa_model">Xiaomi-raphael</string>
     <!-- type of soter finger pay, config by owner of soter -->
     <integer name="type_soter_finger_pay">2</integer>
     <!-- finger record, config by owner -->
@@ -278,9 +284,9 @@
     <!-- font scale for largeui mode -->
     <float name="godzillaui_font_scale">1.40</float>
     <!-- support nfc -->
-    <bool name="support_nfc">false</bool>
+    <bool name="support_nfc">true</bool>
     <!-- NFC related -->
-    <bool name="support_se_route">false</bool>
+    <bool name="support_se_route">true</bool>
     <!--whether the device supports screen key position swap-->
     <bool name="support_screen_key_swap">false</bool>
     <!--These app has permission to access aux camera -->
@@ -293,7 +299,9 @@
         <item>com.android.systemui</item>
         <item>com.phonetest.application</item>
         <item>com.phonetest.application.test</item>
+        <item>com.ss.android.ugc.aweme</item>
         <item>com.xiaomi.cameratools</item>
+        <item>com.miui.cameratest</item>
     </string-array>
     <!--still beautify value for 3rd party call-->
     <string name="extra_still_beautify_value">i:2</string>
@@ -328,6 +336,7 @@
         <item>com.xiaomi.midrop</item>
         <item>com.android.midrive</item>
         <item>com.xiaomi.drivemode</item>
+        <item>com.miui.smarttravel</item>
     </string-array>
     <!--system data-app path list -->
     <string-array name="system_data_path_list">
@@ -349,6 +358,7 @@
         <item>/system/data-app/MiDrop/MiDrop.apk</item>
         <item>/system/data-app/MiDrive/MiDrive.apk</item>
         <item>/system/data-app/MiuiDriveMode/MiuiDriveMode.apk</item>
+        <item>/system/data-app/SmartTravel/SmartTravel.apk</item>
     </string-array>
     <!--whether surpport paper mode animation-->
     <bool name="support_papermode_animation">true</bool>
@@ -379,30 +389,44 @@
     <!--whether camera support front flash-->
     <bool name="support_front_flash">true</bool>
     <!--whether support psensor in pocket mode (true by default)-->
-    <bool name="support_psensor_pocket_mode">false</bool>
+    <bool name="support_psensor_pocket_mode">true</bool>
     <!--whether camera support realtime manual exposure time-->
     <bool name="support_realtime_manual_exposure_time">true</bool>
     <!--whether sensor_has_latency-->
     <bool name="sensor_has_latency">true</bool>
-    <!-- whether support touch gamemode -->
+   <!-- whether support touch gamemode -->
     <bool name="support_touchfeature_gamemode">true</bool>
     <!-- whether support bluetooth fast startup -->
     <bool name="support_bluetooth_boost">true</bool>
     <string name="bluetooth_boost_value">0x000011C0</string>
     <!-- whether support ai task button -->
     <bool name="support_ai_task">false</bool>
-    <!-- whether support wlan low latency mode -->
-    <bool name="support_wifi_low_latency_mode">true</bool>
+    <!-- whether support fast connect bluetooth device -->
+    <bool name="support_bluetooth_fast_connect">true</bool>
     <!-- whether support display gamemode -->
     <bool name="support_displayfeature_gamemode">true</bool>
+    <!-- whether support wlan low latency mode -->
+    <bool name="support_wifi_low_latency_mode">true</bool>
     <!-- whether support extreme mode only support perseus-->
     <bool name="support_extreme_battery_saver">false</bool>
+    <!--These region support face unlock-->
+    <string-array name="support_face_unlock_region_dom">
+        <item>CN</item>
+    </string-array>
     <!--These region support face unlock-->
     <string-array name="support_face_unlock_region_global">
         <item>ALL</item>
     </string-array>
     <!-- device head sar value -->
-    <float name="device_head_sar">1.070</float>
+    <float name="device_head_sar">1.030</float>
     <!-- device body sar value -->
-    <float name="device_body_sar">0.723</float>
+    <float name="device_body_sar">0.720</float>
+    <!-- whether support dc backlight -->
+    <bool name="support_dc_backlight">true</bool>
+    <!-- whether support dc backlight dimming -->
+    <bool name="support_dc_backlight_dimming">false</bool>
+    <!-- dimming level for dc backlight -->
+    <float name="dc_backlight_dimming_level">1.0</float>
+    <!-- whether support hangup while screen turnning off -->
+    <bool name="support_hangup_while_screen_off">true</bool>
 </features>

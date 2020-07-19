@@ -1,10 +1,7 @@
-# ANXCamera for Mi 9T / Redmi K20
+# ANXCamera for Mi 9T Pro / Redmi K20 Pro
 ## Getting Started :
 ### Cloning :
-- Clone this repo in vendor/aeonax/ANXCamera in your working directory by :
+- Clone this repo in vendor/ANXCamera in your working directory by :
 ```
-git clone https://github.com/LouisG1977/vendor_aeonax_anxcamera vendor/aeonax/ANXCamera
+git clone https://github.com/taranhora/vendor_anxcamera vendor/ANXCamera
 ```
-### Changes Required :
-- You will need [these changes in your device tree.](https://github.com/sarveshrulz/android_device_xiaomi_phoenix/commit/4f8e58a644de2593847c662add77d282b2f998f8)
-- Done, continue building your ROM as you do normally.
